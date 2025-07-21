@@ -1,15 +1,17 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: "app-root",
   template: `
-    <h1>Welcome to {{ title() }}!</h1>
-
+    <app-header></app-header>
     <router-outlet />
   `,
   standalone: false,
-  styles: []
+  styles: [],
 })
 export class App {
-  protected readonly title = signal('village');
+  protected readonly title = signal("village");
+  ngOnInit(): void {
+    document.body.classList.add("app-body");
+  }
 }
