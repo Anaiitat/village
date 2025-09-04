@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+body.app-body {
+  margin: 0px;
+  
+}
+
+@font-face {
+    font-family : Bubble;
+    src: url(../public/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.ttf);
+}
+
+@font-face {
+    font-family : Bubble Bold;
+    src: url(../public/fonts/bubbleboddy_neue/BubbleboddyNeue-Bold\ Trial.ttf);
+}
+
+@font-face {
+    font-family : Comfortaa;
+    src: url(../public/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
+}
