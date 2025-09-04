@@ -16,34 +16,31 @@ import { Component } from "@angular/core";
   `,
   styles: `
 
-.site {
+ .site {
+      background-color: #F9D0A3;
+    }
 
-  background-color: #F9D0A3;
+    .site img {
+      width: 250px;
+    }
 
-  img{
-   width:250px
-  }
-     
     .site-header {
       display: flex;
-      justify-content: space-between
+      justify-content: space-between;
     }
 
     nav {
-    display:flex;
-    flex-wrap: wrap;
-    align-content: center;
-    margin-right: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+      margin-right: 3rem;
     }
 
-    a{
-      margin:2rem;
-      font-size:25px;
-      font-family:'Bubble Bold';
-      
+    nav a {
+      margin: 2rem;
+      font-size: 25px;
+      font-family: 'Bubble Bold';
     }
-   
-  }
-  `,
+  `
 })
 export class Header {}
