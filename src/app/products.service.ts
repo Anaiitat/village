@@ -76,6 +76,8 @@ export class ProductsService {
     return this.products;
   }
 
+  sortOrder: "asc" | "desc" = "asc";
+
   
   
 }

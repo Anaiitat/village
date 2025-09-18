@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { ProductsService, Product,  } from "../products.service";
-
+import { ProductsService, Product } from "../products.service";
 
 @Component({
   selector: "app-home",
@@ -25,9 +24,22 @@ import { ProductsService, Product,  } from "../products.service";
               (input)="onSearch($event)"
               [value]="searchText"
             />
-            <div *ngFor="let product of products | filterByName : searchText">
+            <label for="sort">Trier par :</label>
+            <select id="sort" [(ngModel)]="sortOrder">
+              <option value="asc">Prix Croissant</option>
+              <option value="desc">Prix Décroissant</option>
+            </select>
+
+            <div
+              *ngFor="
+                let product of products
+                  | filterByName : searchText
+                  | sortbyprice : sortOrder
+              "
+            >
               <h2>{{ product.name }}</h2>
               <img [src]="product.imageUrl" />
+              <p>{{ product.price }}€</p>
             </div>
           </div>
         </div>
@@ -52,6 +64,7 @@ import { ProductsService, Product,  } from "../products.service";
 })
 export class Home implements OnInit {
   products: Product[] = [];
+  sortOrder: "asc" | "desc" = "asc";
   constructor(private productsService: ProductsService) {}
   ngOnInit(): void {
     this.products = this.productsService.getProducts();
