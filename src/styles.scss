@@ -4,6 +4,18 @@ body.app-body {
   
 }
 
+p, input, label, select {
+    font-family: "Comfortaa" ;
+}
+
+h1{
+    font-family: "Bubble Bold";
+}
+
+h2{
+    font-family: "Bubble";
+}
+
 @font-face {
     font-family : Bubble;
     src: url(../public/fonts/bubbleboddy_neue/BubbleboddyNeue-Thin-Trial.ttf);
@@ -18,3 +30,4 @@ body.app-body {
     font-family : Comfortaa;
     src: url(../public/fonts/Comfortaa/Comfortaa-VariableFont_wght.ttf);
 }
+

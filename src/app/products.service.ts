@@ -22,7 +22,7 @@ export class ProductsService {
       description:
         "Cette figurine d'Astérix représente le célèbre héros gaulois dans sa tenue traditionnelle avec son casque ailé, son bouclier et son inséparable gourde de potion magique. Fabriquée en résine de haute qualité, chaque détail est soigneusement peint à la main pour capturer l'esprit du personnage.",
       price: 29.99,
-      imageUrl: "../../assets/images/figurines/asterix.png",
+      imageUrl: "assets/images/figurines/asterix.png",
       inStock: true,
     },
     {
