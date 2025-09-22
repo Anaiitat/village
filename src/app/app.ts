@@ -3,7 +3,7 @@ import { Component, signal } from '@angular/core';
 @Component({
   selector: "app-root",
   template: `
-    <app-header></app-header>
+    
     <router-outlet />
   `,
   standalone: false,
