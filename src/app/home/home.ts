@@ -50,6 +50,7 @@ import { ProductsService, Product } from "../products.service";
         </div>
       </section>
     </main>
+    <app-footer></app-footer>
   `,
   styles: `
 
