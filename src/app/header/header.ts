@@ -9,7 +9,7 @@ import { Component } from "@angular/core";
         <img src="./assets/images/logo/logo.png" alt="Logo" />
         <nav class="">
           <a>Contact</a>
-          <a>A Propos</a>
+          <a routerLink="about">A Propos</a>
         </nav>
       </div>
     </header>
@@ -41,6 +41,6 @@ import { Component } from "@angular/core";
       font-size: 25px;
       font-family: 'Bubble Bold';
     }
-  `
+  `,
 })
 export class Header {}
