@@ -10,9 +10,10 @@ import { SortbypricePipe } from './sortbyprice-pipe';
 import { Footer } from './footer/footer';
 import { About } from './about/about';
 import { RouterLink } from '@angular/router';
+import { Contact } from './contact/contact';
 
 @NgModule({
-  declarations: [App, Home, Header, FilterByNamePipe, SortbypricePipe, Footer, About],
+  declarations: [App, Home, Header, FilterByNamePipe, SortbypricePipe, Footer, About, Contact],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RouterLink],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

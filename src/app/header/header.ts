@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
       <div class="site-header">
         <img src="./assets/images/logo/logo.png" alt="Logo" />
         <nav class="">
-          <a>Contact</a>
+          <a routerLink="contact">Contact</a>
           <a routerLink="about">A Propos</a>
         </nav>
       </div>
