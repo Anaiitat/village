@@ -42,7 +42,7 @@ import { ProductsService, Product } from "../products.service";
                   | sortbyprice : sortOrder
               "
             >
-              <a routerLink="/produit/{{product.id}}">
+              <a routerLink="/produit/{{ product.id }}">
                 <h2>{{ product.name }}</h2>
                 <img [src]="product.imageUrl" />
                 <p>{{ product.price }}€</p>
@@ -85,7 +85,13 @@ import { ProductsService, Product } from "../products.service";
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
 
+  }
+
+  .produits a {
+    text-decoration:none;
+    color:#151217;
   }
 
   .produits div{
