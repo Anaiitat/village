@@ -6,7 +6,9 @@ import { Component } from "@angular/core";
   template: `
     <header class="site">
       <div class="site-header">
-        <img src="./assets/images/logo/logo.png" alt="Logo" />
+        <a routerLink="/">
+          <img src="./assets/images/logo/logo.png" alt="Logo" />
+        </a>
         <nav class="">
           <a routerLink="/contact">Contact</a>
           <a routerLink="/about">A Propos</a>
@@ -40,6 +42,12 @@ import { Component } from "@angular/core";
       margin: 2rem;
       font-size: 25px;
       font-family: 'Bubble Bold';
+      text-decoration:none;
+      color:#151217;
+    }
+
+    nav a:hover{
+      color:#DA001E;
     }
   `,
 })
