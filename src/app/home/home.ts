@@ -42,9 +42,11 @@ import { ProductsService, Product } from "../products.service";
                   | sortbyprice : sortOrder
               "
             >
-              <h2>{{ product.name }}</h2>
-              <img [src]="product.imageUrl" />
-              <p>{{ product.price }}€</p>
+              <a routerLink="/produit/{{product.id}}">
+                <h2>{{ product.name }}</h2>
+                <img [src]="product.imageUrl" />
+                <p>{{ product.price }}€</p>
+              </a>
             </div>
           </div>
         </div>
@@ -106,9 +108,7 @@ import { ProductsService, Product } from "../products.service";
     justify-content: space-evenly;
   }
 
-  .trie div{
-
-  }
+  
   
   `,
 })

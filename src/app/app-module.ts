@@ -11,9 +11,10 @@ import { Footer } from './footer/footer';
 import { About } from './about/about';
 import { RouterLink } from '@angular/router';
 import { Contact } from './contact/contact';
+import { Produit } from './produit/produit';
 
 @NgModule({
-  declarations: [App, Home, Header, FilterByNamePipe, SortbypricePipe, Footer, About, Contact],
+  declarations: [App, Home, Header, FilterByNamePipe, SortbypricePipe, Footer, About, Contact, Produit],
   imports: [BrowserModule, AppRoutingModule, FormsModule, RouterLink],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
