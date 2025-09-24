@@ -9,10 +9,11 @@ import { Component } from "@angular/core";
         <a routerLink="/">
           <img src="./assets/images/logo/logo.png" alt="Logo" />
         </a>
-        <nav class="">
-          <a routerLink="/contact">Contact</a>
-          <a routerLink="/about">A Propos</a>
+        <nav [class.open]="menuOpen">
+          <a routerLink="/contact" (click)="menuOpen = false">Contact</a>
+          <a routerLink="/about" (click)="menuOpen = false">A Propos</a>
         </nav>
+        <div id="icons" (click)="toggleMenu()"></div>
       </div>
     </header>
   `,
@@ -36,6 +37,7 @@ import { Component } from "@angular/core";
       flex-wrap: wrap;
       align-content: center;
       margin-right: 3rem;
+      
     }
 
     nav a {
@@ -49,6 +51,52 @@ import { Component } from "@angular/core";
     nav a:hover{
       color:#DA001E;
     }
+
+    #icons{
+      cursor: pointer;
+      display:none;
+      
+    }
+
+     #icons:before {
+        content:"\u2630";
+      }
+
+
+    @media (max-width:1024px) {
+      #icons{
+        display: block;
+        font-size:50px;
+         margin-top: 60px;
+    padding-right:50px
+      }
+
+      nav {
+         display: none;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #F9D0A3;
+    flex-direction: column;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  nav.open {
+    display: flex; 
+    
+    ;
+    
+  }
+     
+    }
   `,
 })
-export class Header {}
+export class Header {
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+}
