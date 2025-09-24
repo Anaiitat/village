@@ -7,14 +7,13 @@ export interface Product {
   price: number;
   imageUrl: string;
   inStock: boolean;
+  stockStatus?: string;
 }
 
 @Injectable({
   providedIn: "root",
 })
 export class ProductsService {
-  
-
   private products: Product[] = [
     {
       id: 1,
@@ -72,12 +71,19 @@ export class ProductsService {
     },
   ];
 
-  getProducts(): Product[] {
-    return this.products;
+  getProducts(): (Product & { stockStatus: string })[] {
+    return this.products.map((p) => ({
+      ...p,
+      stockStatus: p.inStock ? "En stock" : "Épuisé",
+    }));
   }
 
   sortOrder: "asc" | "desc" = "asc";
 
-  
-  
+  getProductById(id: number): Product | undefined {
+    const product = this.products.find((p) => p.id === id);
+    return product
+      ? { ...product, stockStatus: product.inStock ? "En stock" : "Épuisé" }
+      : undefined;
+  }
 }
